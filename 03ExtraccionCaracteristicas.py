@@ -1,9 +1,10 @@
 import pandas as pd
 from zoneinfo import ZoneInfo
+from datetime import datetime
 
 #Configuración
-archivoEntrada = "Final.csv"
-archivoSalida = "datasetExtraido.csv"
+archivoEntrada = "datos_crudos_2025_08_24.csv"
+archivoSalida = "datasetExtraido" + datetime.now().strftime("%d-%m-%Y %H_%M_%S") + ".csv"
 ventanaTiempo = "5min"   # "5min", "10min", "15min"
 zonaEcuador = ZoneInfo("America/Guayaquil")
 

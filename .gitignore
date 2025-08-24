@@ -1,3 +1,9 @@
+*.csv
+*.xls
+*.xlsx
+01ExtraccionDatos.py
+02UnirDatosCrudos.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
