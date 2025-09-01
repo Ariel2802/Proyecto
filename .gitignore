@@ -3,6 +3,7 @@
 *.xlsx
 01ExtraccionDatos.py
 02UnirDatosCrudos.py
+lightning_logs/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
