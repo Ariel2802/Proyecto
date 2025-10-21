@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="never" default-locale="es-ES">
-	<info>
-		<title>UNE-ISO 690:2013 (Sistema Numérico RCTU)</title>
-		<id>http://www.zotero.org/styles/une-iso-690-rctu</id>
-		<link href="http://www.zotero.org/styles/une-iso-690-rctu" rel="self"/>
-		<link href="http://www.zotero.org/styles/iso690-numeric-brackets-cs" rel="template"/>
-		<author>
-			<name>Adaptado para RCTU</name>
-		</author>
-		<category citation-format="numeric"/>
-		<category field="generic-base"/>
-		<updated>2025-10-21T06:32:00+00:00</updated>
-		<rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
-	</info>
+<info>
+  <title>UNE-ISO 690:2013 (Sistema Numérico RCTU)</title>
+  <id>https://csl.mendeley.com/styles/une-iso-690-rctu</id>
+  <link href="https://csl.mendeley.com/styles/une-iso-690-rctu" rel="self"/>
+  <link href="http://www.zotero.org/styles/iso690-numeric-brackets-cs" rel="template"/>
+  <author>
+    <name>Adaptado para RCTU</name>
+  </author>
+  <category citation-format="numeric"/>
+  <category field="generic-base"/>
+  <updated>2024-10-21T00:00:00Z</updated>
+  <rights license="http://creativecommons.org/licenses/by-sa/3.0/">
+    This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License
+  </rights>
+</info>
+
 	<locale>
 		<terms>
 			<term name="and">Y</term>
