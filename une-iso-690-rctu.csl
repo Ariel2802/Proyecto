@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="never" default-locale="es-ES">
+  <!-- This style was edited with the Visual CSL Editor (https://editor.citationstyles.org/visualEditor/) -->
+  <info>
+    <title>UNE-ISO 690:2013 (Sistema Numérico RCTU)</title>
+    <id>http://www.zotero.org/styles/une-iso-690-rctu</id>
+    <link href="http://www.zotero.org/styles/une-iso-690-rctu" rel="self"/>
+    <link href="http://www.zotero.org/styles/iso690-numeric-brackets-cs" rel="template"/>
+    <author>
+      <name>Adaptado para RCTU</name>
+    </author>
+    <category citation-format="numeric"/>
+    <category field="generic-base"/>
+    <updated>2025-10-21T14:43:49+00:00</updated>
+    <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
+  </info>
+  <locale>
+    <terms>
+      <term name="and">Y</term>
+      <term name="online">online</term>
+      <term name="page" form="short">pág.</term>
+      <term name="page-range-delimiter">–</term>
+    </terms>
+  </locale>
+  <macro name="author">
+    <names variable="author" text-case="uppercase">
+      <name and="text" name-as-sort-order="first" sort-separator=", " delimiter=", " delimiter-precedes-last="never" initialize-with="."/>
+    </names>
+  </macro>
+  <macro name="editor">
+    <names variable="editor" text-case="uppercase">
+      <name and="text" name-as-sort-order="first" sort-separator=", " delimiter=", " delimiter-precedes-last="never" initialize-with="."/>
+      <label prefix=", " form="short" suffix="."/>
+    </names>
+  </macro>
+  <macro name="translator">
+    <names variable="translator" text-case="uppercase">
+      <name and="text" delimiter=", " delimiter-precedes-last="never" initialize-with="."/>
+      <label prefix=" (" form="short" suffix=".)"/>
+    </names>
+  </macro>
+  <macro name="responsibility">
+    <choose>
+      <if variable="author editor translator" match="any">
+        <choose>
+          <if variable="author">
+            <text macro="author"/>
+          </if>
+          <else-if variable="editor">
+            <text macro="editor"/>
+          </else-if>
+          <else>
+            <text macro="translator"/>
+          </else>
+        </choose>
+      </if>
+    </choose>
+  </macro>
+  <macro name="title">
+    <choose>
+      <if type="book thesis map motion_picture song manuscript report standard" match="any">
+        <text variable="title" font-style="italic"/>
+      </if>
+      <else>
+        <text variable="title"/>
+      </else>
+    </choose>
+  </macro>
+  <macro name="container-title">
+    <text variable="container-title" font-style="italic"/>
+  </macro>
+  <macro name="year">
+    <choose>
+      <if variable="issued">
+        <date variable="issued">
+          <date-part name="year"/>
+        </date>
+      </if>
+    </choose>
+  </macro>
+  <macro name="vol-issue-pages">
+    <group delimiter=", ">
+      <text macro="year"/>
+      <choose>
+        <if variable="volume">
+          <group delimiter=" ">
+            <text value="vol."/>
+            <text variable="volume"/>
+          </group>
+        </if>
+      </choose>
+      <choose>
+        <if variable="issue">
+          <group delimiter=" ">
+            <text value="n.o"/>
+            <text variable="issue"/>
+          </group>
+        </if>
+      </choose>
+      <choose>
+        <if variable="page">
+          <group delimiter=" ">
+            <text term="page" form="short"/>
+            <text variable="page"/>
+          </group>
+        </if>
+      </choose>
+    </group>
+  </macro>
+  <macro name="publisher-place">
+    <text variable="publisher-place"/>
+  </macro>
+  <macro name="publisher">
+    <text variable="publisher"/>
+  </macro>
+  <macro name="publisher-info">
+    <group delimiter=": ">
+      <text macro="publisher-place"/>
+      <text macro="publisher"/>
+    </group>
+  </macro>
+  <macro name="online-flag">
+    <choose>
+      <if variable="URL DOI" match="any">
+        <text value="[online]"/>
+      </if>
+    </choose>
+  </macro>
+  <macro name="available-at">
+    <choose>
+      <if variable="DOI">
+        <group delimiter=" ">
+          <text value="Disponible en:"/>
+          <text variable="DOI" prefix="https://doi.org/"/>
+        </group>
+      </if>
+      <else-if variable="URL">
+        <group delimiter=" ">
+          <text value="Disponible en:"/>
+          <text variable="URL"/>
+        </group>
+      </else-if>
+    </choose>
+  </macro>
+  <macro name="bib-article">
+    <group delimiter=". ">
+      <text macro="responsibility"/>
+      <text macro="title"/>
+      <group delimiter=" ">
+        <text macro="container-title"/>
+        <text macro="online-flag"/>
+      </group>
+      <text macro="vol-issue-pages"/>
+      <text macro="available-at"/>
+    </group>
+  </macro>
+  <macro name="bib-book">
+    <group delimiter=". ">
+      <text macro="responsibility"/>
+      <text macro="title"/>
+      <text macro="publisher-info"/>
+      <text macro="year"/>
+      <text macro="available-at"/>
+    </group>
+  </macro>
+  <macro name="bib-chapter">
+    <group delimiter=". ">
+      <text macro="responsibility"/>
+      <text macro="title"/>
+      <group delimiter=": ">
+        <text term="in" text-case="capitalize-first"/>
+        <text macro="container-title"/>
+      </group>
+      <group delimiter=", ">
+        <text macro="publisher-info"/>
+        <text macro="year"/>
+        <group delimiter=" ">
+          <text term="page" form="short"/>
+          <text variable="page"/>
+        </group>
+      </group>
+      <text macro="available-at"/>
+    </group>
+  </macro>
+  <macro name="bib-thesis">
+    <group delimiter=". ">
+      <text macro="responsibility"/>
+      <group delimiter=" ">
+        <text variable="title" font-style="italic"/>
+        <text value="[online]"/>
+      </group>
+      <group delimiter=", ">
+        <text variable="genre"/>
+        <text macro="publisher"/>
+        <text macro="publisher-place"/>
+        <text macro="year"/>
+      </group>
+      <text macro="available-at"/>
+    </group>
+  </macro>
+  <macro name="bib-standard">
+    <group delimiter=". ">
+      <text macro="responsibility"/>
+      <group delimiter=", ">
+        <text variable="number"/>
+        <text variable="title"/>
+      </group>
+      <group delimiter=", ">
+        <text macro="publisher-info"/>
+        <text macro="year"/>
+      </group>
+      <group delimiter=". ">
+        <text value="[online]"/>
+        <text macro="available-at"/>
+      </group>
+    </group>
+  </macro>
+  <macro name="bib-web">
+    <group delimiter=". ">
+      <text macro="responsibility"/>
+      <group delimiter=" ">
+        <text variable="title"/>
+        <text value="[online]"/>
+      </group>
+      <text macro="year"/>
+      <text macro="available-at"/>
+    </group>
+  </macro>
+  <citation collapse="citation-number" after-collapse-delimiter=", ">
+    <sort>
+      <key variable="citation-number"/>
+    </sort>
+    <layout prefix="[" suffix="]" delimiter=", ">
+      <text variable="citation-number"/>
+    </layout>
+  </citation>
+  <bibliography>
+    <sort>
+      <key variable="citation-number"/>
+    </sort>
+    <layout>
+      <text variable="citation-number" suffix=". "/>
+      <choose>
+        <if type="article-journal article-magazine article-newspaper" match="any">
+          <text macro="bib-article"/>
+        </if>
+        <else-if type="book" match="any">
+          <text macro="bib-book"/>
+        </else-if>
+        <else-if type="chapter paper-conference entry-dictionary entry-encyclopedia" match="any">
+          <text macro="bib-chapter"/>
+        </else-if>
+        <else-if type="thesis" match="any">
+          <text macro="bib-thesis"/>
+        </else-if>
+        <else-if type="report standard" match="any">
+          <text macro="bib-standard"/>
+        </else-if>
+        <else-if type="webpage post post-weblog broadcast" match="any">
+          <text macro="bib-web"/>
+        </else-if>
+        <else>
+          <text macro="bib-article"/>
+        </else>
+      </choose>
+      <text value="."/>
+    </layout>
+  </bibliography>
+</style>
