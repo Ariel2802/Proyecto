@@ -1,8 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="never" default-locale="es-ES">
 	<info>
 		<title>UNE-ISO 690:2013 (Sistema Numérico RCTU)</title>
 		<id>https://raw.githubusercontent.com/Ariel2802/Proyecto/main/isoFinal.csl</id>
-		<link href="https://csl.mendeley.com/styles/une-iso-690-rctu" rel="self"/>
+		<link href="https://raw.githubusercontent.com/Ariel2802/Proyecto/main/isoFinal.csl" rel="self"/>
 		<link href="http://www.zotero.org/styles/iso690-numeric-brackets-cs" rel="template"/>
 		<author>
 			<name>Adaptado para RCTU</name>
