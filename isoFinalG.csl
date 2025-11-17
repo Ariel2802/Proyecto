@@ -7,8 +7,8 @@
 
   <info>
     <title>UNE-ISO 690:2013 (Sistema Numérico RCTU)</title>
-    <id>https://raw.githubusercontent.com/Ariel2802/Proyecto/main/isoFinal.csl</id>
-	<link href="https://raw.githubusercontent.com/Ariel2802/Proyecto/main/isoFinal.csl" rel="self"/>
+    <id>https://csl.mendeley.com/styles/783910661/iso690final</id>
+    <link href="https://csl.mendeley.com/styles/783910661/iso690final" rel="self"/>
     <link href="http://www.zotero.org/styles/iso690-numeric-brackets-cs" rel="template"/>
     <author>
       <name>Adaptado para RCTU</name>
@@ -30,51 +30,38 @@
     </terms>
   </locale>
 
-    <!-- AUTOR: APELLIDO EN MAYÚSCULAS, NOMBRES CON INICIALES -->
   <macro name="author">
-    <names variable="author">
+    <names variable="author" text-case="uppercase">
       <name and="text"
             name-as-sort-order="first"
             sort-separator=", "
             delimiter=", "
             delimiter-precedes-last="never"
-            initialize-with=".">
-        <name-part name="family" text-case="uppercase"/>
-        <name-part name="given"/>
-      </name>
+            initialize-with="."/>
     </names>
   </macro>
 
-  <!-- EDITOR: APELLIDO EN MAYÚSCULAS, NOMBRES CON INICIALES + ETIQUETA -->
   <macro name="editor">
-    <names variable="editor">
+    <names variable="editor" text-case="uppercase">
       <name and="text"
             name-as-sort-order="first"
             sort-separator=", "
             delimiter=", "
             delimiter-precedes-last="never"
-            initialize-with=".">
-        <name-part name="family" text-case="uppercase"/>
-        <name-part name="given"/>
-      </name>
+            initialize-with="."/>
       <label prefix=", " form="short" suffix="."/>
     </names>
   </macro>
 
-  <!-- TRADUCTOR: APELLIDO EN MAYÚSCULAS, NOMBRES CON INICIALES + (trad.) -->
   <macro name="translator">
-    <names variable="translator">
+    <names variable="translator" text-case="uppercase">
       <name and="text"
             delimiter=", "
             delimiter-precedes-last="never"
-            initialize-with=".">
-        <name-part name="family" text-case="uppercase"/>
-        <name-part name="given"/>
-      </name>
+            initialize-with="."/>
       <label prefix=" (" form="short" suffix=".)"/>
     </names>
   </macro>
-
 
   <macro name="responsibility">
     <choose>
@@ -282,6 +269,7 @@
     </group>
   </macro>
 
+  <!-- OJO: quitamos after-collapse-delimiter, que a veces da problemas -->
   <citation collapse="citation-number">
     <sort>
       <key variable="citation-number"/>
